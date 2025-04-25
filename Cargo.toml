@@ -12,8 +12,8 @@ crate-type = ["cdylib"]
 wit-bindgen = "0.41.0"
 
 [profile.release]
-opt-level = "z"      # Optimize for size
-lto = true           # Enable link-time optimization
-codegen-units = 1    # Reduce parallel codegen for smaller size
-panic = "abort"      # Avoid unwind code
-strip = true         # Strip debug info and symbols
+opt-level = "z"   # Optimize for size
+lto = true        # Enable link-time optimization
+codegen-units = 1 # Reduce parallel codegen for smaller size
+panic = "abort"   # Avoid unwind code
+strip = true      # Strip debug info and symbols
