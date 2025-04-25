@@ -3,6 +3,39 @@ revision = 2
 requires-python = ">=3.13"
 
 [[package]]
+name = "importlib-resources"
+version = "6.5.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/cf/8c/f834fbf984f691b4f7ff60f50b514cc3de5cc08abfc3295564dd89c5e2e7/importlib_resources-6.5.2.tar.gz", hash = "sha256:185f87adef5bcc288449d98fb4fba07cea78bc036455dd44c5fc4a2fe78fed2c", size = 44693, upload_time = "2025-01-03T18:51:56.698Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/a4/ed/1f1afb2e9e7f38a545d628f864d562a5ae64fe6f7a10e28ffb9b185b4e89/importlib_resources-6.5.2-py3-none-any.whl", hash = "sha256:789cfdc3ed28c78b67a06acb8126751ced69a3d5f79c095a98298cd8a760ccec", size = 37461, upload_time = "2025-01-03T18:51:54.306Z" },
+]
+
+[[package]]
+name = "wasmtime"
+version = "32.0.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "importlib-resources" },
+]
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/08/3c/4edd9c2e54071ecf120c839294e1ce7583f499b2c6a2fb9c7168fc98b8d6/wasmtime-32.0.0-py3-none-any.whl", hash = "sha256:7e8eb93b05620f23f9e3093723ae1f0407b551d6c0aa9c15316604bf51751f2f", size = 5962484, upload_time = "2025-04-21T16:59:05.371Z" },
+    { url = "https://files.pythonhosted.org/packages/9f/63/4d3e17f9c8d16a813f4129da83ed3477a8d8191cb0a2ff2fefaef151d33c/wasmtime-32.0.0-py3-none-macosx_10_13_x86_64.whl", hash = "sha256:e8b884aa2adc2ec99869212f655ff1579ee201b81b483a9804e0187381263919", size = 7144620, upload_time = "2025-04-21T16:59:07.463Z" },
+    { url = "https://files.pythonhosted.org/packages/c8/39/445e37db48d2b2fe0009a9b4125df4499cf430669e675cc35cb4d88ee25e/wasmtime-32.0.0-py3-none-macosx_11_0_arm64.whl", hash = "sha256:6a7b07e04536b7ce27befb1a5f498353a4d7cbd908c89e0f1af40445692e2391", size = 6392466, upload_time = "2025-04-21T16:59:08.799Z" },
+    { url = "https://files.pythonhosted.org/packages/d5/4f/ea00bada2e762860cdbba96957287caeccf78883b6f3d0aa74dd5771a530/wasmtime-32.0.0-py3-none-manylinux1_x86_64.whl", hash = "sha256:7b42281481a0b73d11064618920b1c2e42194b1a23f2e3c811f53936314c1ef1", size = 7604740, upload_time = "2025-04-21T16:59:10.179Z" },
+    { url = "https://files.pythonhosted.org/packages/ca/cf/f822ede52f6c413ace5419f205dad39c243b7a1d7118d9f16a45f13b0134/wasmtime-32.0.0-py3-none-manylinux2014_aarch64.whl", hash = "sha256:4d7aa59936f9db651048e0192ff2ae8e94923379b2c0c31b748da8062f90c3fc", size = 6985857, upload_time = "2025-04-21T16:59:12.117Z" },
+    { url = "https://files.pythonhosted.org/packages/90/6d/ada190c36cfe3a4fd267642f4bfb32d2ca04f6b923352c44827e4f9f2a16/wasmtime-32.0.0-py3-none-musllinux_1_2_x86_64.whl", hash = "sha256:daa99b76994f2a3526a9ebc3be763550830de36ded676329ef9db2c1686a25b4", size = 7611974, upload_time = "2025-04-21T16:59:13.592Z" },
+    { url = "https://files.pythonhosted.org/packages/99/72/3290766bf457424d6a4abe94c6be6214cb7f8de359f9154e15b0aed2db34/wasmtime-32.0.0-py3-none-win_amd64.whl", hash = "sha256:4566a5fd5f6c2832c703b13d029b660203756ade8f297ed50a62f2a53e7c55dd", size = 5962488, upload_time = "2025-04-21T16:59:15.003Z" },
+    { url = "https://files.pythonhosted.org/packages/04/45/152a11e504af41642ac6bda7367ec11a93fc3624cc8b35cfa451799bd486/wasmtime-32.0.0-py3-none-win_arm64.whl", hash = "sha256:33ae41f6ac9a3435444c3135c8364590633a331cba5e1bab7554f0436ce7c6c4", size = 5394802, upload_time = "2025-04-21T16:59:16.265Z" },
+]
+
+[[package]]
 name = "ww"
 version = "0.1.0"
 source = { virtual = "." }
+dependencies = [
+    { name = "wasmtime" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "wasmtime" }]
