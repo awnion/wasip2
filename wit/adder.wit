@@ -1,5 +1,7 @@
-package wasi-mindmap:adder;
+package adder:adder;
+
 
 world adder {
-    export add: func(a: s32, b: s32) -> s32;
+    export add:   func(a: s32, b: s32) -> s32;
+    export bench: func(a: s32) -> s32;
 }

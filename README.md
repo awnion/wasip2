@@ -21,7 +21,8 @@ uv run main.py
 ```bash
 cd wit
 uv run componentize-py --wit-path adder.wit --world adder componentize guest-adder -o guest_adder_py.wasm
-cp guest_adder_py.wasm ../guest_adder_py.wasm
+
+cargo run --bin example --release
 ```
 
 ## See
