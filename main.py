@@ -4,12 +4,12 @@ from wasmtime import Store
 # The magic, refer to https://github.com/bytecodealliance/wasmtime-py?tab=readme-ov-file#usage
 import wasmtime.loader  # noqa: F401
 
-from ww import Root
+import adder  # type: ignore
 
 
 def run_adder_rs_guest():
     store = Store()
-    adder_component_instance = Root(store)
+    adder_component_instance = adder.Root(store)
 
     start = time.time()
     result = adder_component_instance.add(store, 1, 2)
@@ -28,6 +28,7 @@ def run_adder_rs_guest():
     print(f"{__name__}: 1 + 2 = {result}")
     print(f"add: took {(time.time() - start) * 1000_000:0.2f}µs")
     assert result == 3
+
 
 if __name__ == "__main__":
     run_adder_rs_guest()

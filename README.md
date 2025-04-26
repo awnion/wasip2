@@ -9,9 +9,9 @@
 ## Run
 
 ```bash
-cargo build --release --target wasm32-wasip2
+cargo build -p adder_wasm --release --target wasm32-wasip2
 
-cp target/wasm32-wasip2/release/ww.wasm ww.wasm
+cp target/wasm32-wasip2/release/adder_wasm.wasm adder.wasm
 
 uv run main.py
 ```
@@ -29,4 +29,3 @@ cargo run --bin example --release
 
 - [WIT Design Documentation](https://component-model.bytecodealliance.org/design/wit.html)
 - [Complete Guide to WASI Preview 2 for Rust/Python Programmers](https://ideas.reify.ing/en/blog/complete-guide-to-wasip2-for-rust-python-programmers/)
-
